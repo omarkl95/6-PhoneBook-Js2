@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+     <link rel="stylesheet" href="css/all.min.css" />
+     <!-- <link rel="stylesheet" href="css/icofont.min.css"> -->
+     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index_style.css"/>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+
+        
+
+    </head>
+    <body>
+        <section class="section-main">
+
+            <nav class="clearfix">
+                <div class="logo float-left">Phone Book</div>
+                <div class="nav-input  ">
+                    <input onkeyup="searcher()" type="text" class="search-input" id="search" placeholder='Search...'>
+                    <input onkeyup="lists(document.getElementById('list').value)"  type="text" class="list-input" id="list" placeholder='Sort...'>
+                </div>
+                
+            </nav>
+    
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                    <aside class="aside-menu col-sm-12 col-lg-4 col-xl-3 ">
+                        <div class="input-control">
+                            <label for="">Name</label>
+                            <input type="text" id="userName" placeholder='Yor name...'>
+                            <div id="nameAlert" class="alert alert-danger w-75"> enter valid name</div>
+                        </div>
+    
+                        <div class="input-control">
+                            <label for="">Phone</label>
+                            <input type="text" id="userPhone" placeholder='Your phone...'>
+                            <div id="phoneAlert" class="alert alert-danger w-75"> enter valid phone</div>
+                        </div>
+    
+                        <div class="input-control">
+                            <label for="">Address</label>
+                            <input type="text" id="userAddress" placeholder='Your address...'>
+                            <div id="addressAlert" class="alert alert-danger w-75"> enter valid address</div>
+                        </div>
+                        <button onclick="add()" class="btn btn-info w-75 ">Add</button>
+    
+                        <div class="contactCounter w-75 text-center" id="count">
+                            0
+                        </div>
+                    </aside>
+            
+    
+                    <aside class="aside-table col-sm-12 col-lg-8  col-xl-9">
+                        <div class="head">
+                            <div>Name</div>
+                            <div>Phone</div>
+                            <div>Address</div>
+                            <div>Edit <i onclick="deleteAllContacts()" onmouseover="deleteHoverShow(this)" onmouseout="deleteHoverHide(this)" class="fas fa-minus-circle delete-all" id="deleteAll"></i><i onclick="toggleShow()" id="hide-icon" class="fas fa-eye-slash show-all"></i></i></div>
+                        </div>
+                        <div id="DB-alert" class="alert alert-danger">
+                            Sorry no any contacts yet try to add new contacts by following steps :<br>
+                             add name <i class="fas fa-angle-right arrow-right"></i> add phone <i class="fas arrow-right fa-angle-right"></i> add address <i class="fas arrow-right fa-angle-right"></i>  add  
+                        </div>
+                        <div  class="contacts" id="contactsList">
+                            <!--from js-->
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+  
+    
+
+<!--===================== footer-area END ======================================-->
+
+
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--counter up -->
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<!--JS -->
+<script src="js/mine.js"></script>
+
+    </body>
+</html>

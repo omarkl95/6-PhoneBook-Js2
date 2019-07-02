@@ -1,0 +1,329 @@
+
+
+/* ------------------------------------------- */
+/* BASIC SETUP */
+/* ------------------------------------------- */
+
+* ,
+*:before ,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus {outline: none}
+
+html {
+    color: #333;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    background-color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+::selection {
+    color: #fff;
+    background-color: #563D7C;
+}
+body    {overflow-y:scroll}
+
+
+/* ------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------- */
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+input {
+    padding: 5px 10px;
+    border: 1px solid #1e90ff;
+    border-radius: .25rem;
+    color: rgb(124, 124, 124);
+    font-size: 80%;
+}
+
+input:focus {
+    box-shadow: 0 0 3px 3px rgba(30, 143, 255, 0.5);
+}
+
+label {
+    display: block;
+}
+
+
+ 
+
+.input-control {
+    margin-bottom: 10px;
+}
+
+a:link ,
+a:visited {
+    text-decoration: none;
+    color:#000;
+}
+
+a:hover ,
+a:active {
+    color: #2ecc71;
+
+}
+
+ 
+
+
+/* ------------------------------------------- */
+/* NAV */
+/* ------------------------------------------- */
+
+nav {
+    position: relative;
+    background-color: #563D7C;
+    padding: 0 10vh;
+    z-index: 1;
+}
+
+nav .list-input {
+    width: 100px;
+    float: right;
+    width: 10%;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+nav .search-input {
+    width: 250px;
+    float: right;
+    width: 30%;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 250%;
+    font-weight: 100;
+    color: #FFF;
+}
+
+[class="col-4"] {
+    background-color: #2f84da;
+}
+
+/* ------------------------------------------- */
+/* ASIDE */
+/* ------------------------------------------- */
+
+.aside-container{
+    display: flex;
+    padding: 20px 2%;
+}
+
+
+aside input {
+    width: 75%;
+}
+
+
+.contactCounter {
+    font-size: 500%;
+    margin-top: 10px;
+    border-radius: .25rem;
+    background-image: radial-gradient(circle, rgb(73, 73, 73),rgb(37, 36, 36));
+}
+
+ 
+.container-fluid {
+    padding-top: 20px;
+}
+
+
+.head {
+    display: flex;
+    background-color: #F1f1f1;
+    padding: 10px 5px;
+    border-radius: .25rem;
+    margin-bottom: 10px;
+}
+
+.head div {
+    flex: 25%;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.contact{
+    display: flex;
+    background-color: #F1f1f1;
+    margin-bottom: 1%;
+    padding: 5px;
+    border-radius: .20rem;
+}
+
+.contact div {
+    flex: 25%;
+   
+}
+
+
+.alert {
+    margin-top: 3px;
+    padding: .25rem;
+    margin-bottom: 0;
+    border-radius: .25rem;
+    display: none;
+}
+
+
+
+.contacts div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-icon{
+    margin: 0 10px;
+    text-align: center;
+    transition: color 0.3s;
+    cursor: pointer;
+  
+}
+
+.contact-icon i{
+    color: #000;
+}
+
+.contact-icon:nth-child(1):hover{
+        color: #44bd32;
+}
+
+.contact-icon:nth-child(2):hover{
+    color: #00a8ff;
+}
+
+ 
+
+#count{
+    transition: all 0.6s;
+}
+
+.delete-all ,
+.show-all{
+    float: right;
+    margin-right: 20px;
+    margin-top: .3em;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.delete-all:hover {
+    color: red;
+}
+
+
+#DB-alert {
+    text-align: center;
+}
+
+.arrow-right {
+    vertical-align: middle;
+}
+
+footer {
+    background-color: #563D7C;
+    padding: 5px;
+    text-align: center;
+    color: #ddd;
+    position: fixed;
+    bottom: 0;
+    left:0;
+     right:0;
+}
+
+footer i {
+    color: red;
+}
+
+ @media only screen and (max-width:576px) {
+    .aside-menu {
+        text-align: center;
+        margin-bottom: 20px;
+    
+    }
+    
+    .contactCounter {
+        margin: auto;
+        margin-top: 10px;
+    }
+    .contactCounter {
+        margin: auto;
+        margin-top: 10px;
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    .aside-table div{
+        text-align: center;
+    }
+    
+   
+        
+}  
+
+ 
+
+@media only screen and (max-width:720px) {
+    .aside-menu {
+        text-align: center;
+        margin-bottom: 20px;
+    
+    }
+
+   .nav-input{
+       display:none;
+   }
+   .contactCounter {
+    margin: auto;
+    margin-top: 10px;
+}
+ 
+
+
+
+
+ 
+    
+     
+ }
+
+ @media only screen and (max-width:992px) {
+    .aside-menu {
+        text-align: center;
+        margin-bottom: 20px;
+    
+    }
+    
+    .contactCounter {
+        margin: auto;
+        margin-top: 10px;
+    }
+    
+    
+    
+ 
+        
+    
+ 
+}
+
+ 
